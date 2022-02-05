@@ -1,0 +1,47 @@
+{
+    "name": "walkerchiu/php-device-rfid",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-morph-image": "^1.0",
+        "walkerchiu/php-morph-rank": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\DeviceRFID\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\DeviceRFID\\DeviceRFIDServiceProvider"
+            ],
+            "aliases": {
+                "Reader":          "WalkerChiu\\DeviceRFID\\Models\\Entities\\Reader",
+                "ReaderWithImage": "WalkerChiu\\DeviceRFID\\Models\\Entities\\ReaderWithImage",
+                "ReaderRegister":  "WalkerChiu\\DeviceRFID\\Models\\Entities\\ReaderRegister",
+                "ReaderState":     "WalkerChiu\\DeviceRFID\\Models\\Entities\\ReaderState",
+                "Card":            "WalkerChiu\\DeviceRFID\\Models\\Entities\\Card",
+                "CardWithImage":   "WalkerChiu\\DeviceRFID\\Models\\Entities\\CardWithImage",
+                "Data":            "WalkerChiu\\DeviceRFID\\Models\\Entities\\Data"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
