@@ -1,0 +1,33 @@
+<phpunit>
+
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="ReaderTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderLangTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="ReaderRegisterTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderRegisterLangTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderRegisterFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="ReaderStateTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderStateLangTest.php">./tests/Entities</directory>
+            <directory suffix="ReaderStateFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="CardTest.php">./tests/Entities</directory>
+            <directory suffix="CardLangTest.php">./tests/Entities</directory>
+            <directory suffix="CardFormRequestTest.php">./tests/Forms</directory>
+            <directory suffix="DataTest.php">./tests/Entities</directory>
+            <directory suffix="DataFormRequestTest.php">./tests/Forms</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="ReaderRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="ReaderRegisterRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="ReaderStateRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="CardRepositoryTest.php">./tests/Repositories</directory>
+            <directory suffix="DataRepositoryTest.php">./tests/Repositories</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_DATABASE" value=":memory:"/>
+    </php>
+
+</phpunit>
